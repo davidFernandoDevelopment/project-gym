@@ -4,14 +4,21 @@ import {
 } from 'react-router-dom';
 
 import { Navbar } from './components';
-import { Home, About } from './pages';
+import { About, Contact, Gallery, Home, NotFound, Plans, Trainers } from './pages';
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <About />
-      <Home />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='about' element={<About />} />
+        <Route path='gallery' element={<Gallery />} />
+        <Route path='plans' element={<Plans />} />
+        <Route path='trainers' element={<Trainers />} />
+        <Route path='contact' element={<Contact />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </Router>
   );
 }

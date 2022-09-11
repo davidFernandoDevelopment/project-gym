@@ -10,10 +10,16 @@ import Logo from '../../images/logo.png';
 const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
 
+  const toggleMenu = () => setIsNavShowing(prev => !prev);
+
   return (
     <nav className='navbar'>
       <div className="container navbar__container">
-        <Link to='/' className='navbar__logo'>
+        <Link
+          to='/'
+          className='navbar__logo'
+          onClick={() => setIsNavShowing(false)}
+        >
           <img src={Logo} alt="Navbar logo" />
         </Link>
         <ul
@@ -30,6 +36,7 @@ const Navbar = () => {
                       `navbar__link ${isActive ?
                         'navbar__link--active' : ''}`
                   }
+                  onClick={toggleMenu}
                 >
                   {name}
                 </NavLink>
@@ -39,10 +46,7 @@ const Navbar = () => {
         </ul>
         <button
           className='navbar__toggle-btn'
-          onClick={() => {
-            console.log('MENU');
-            setIsNavShowing(!isNavShowing);
-          }}
+          onClick={toggleMenu}
         >
           {
             isNavShowing

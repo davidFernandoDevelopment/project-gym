@@ -1,9 +1,9 @@
 import './trainer.scss';
 
-const Trainer = () => {
+const Trainers = () => {
   return (
     <div>Trainer</div>
   )
 }
 
-export default Trainer
+export default Trainers
