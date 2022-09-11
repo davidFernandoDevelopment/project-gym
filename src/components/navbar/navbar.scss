@@ -1,0 +1,136 @@
+@use '../../index.scss' as mx;
+
+@keyframes navAnimation {
+  to {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 5rem;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-primary);
+
+  &__container {
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 7rem;
+  }
+  &__list {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+
+    perspective: 400px;
+
+    @include mx.to(1024px) {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+    }
+    &--show {
+      @include mx.to(1024px) {
+        display: flex;
+      }
+    }
+    &--hidden {
+      @include mx.to(1024px) {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    @include mx.to(1024px) {
+      width: 100%;
+      height: 4rem;
+      box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.4);
+      animation: navAnimation 600ms ease forwards;
+      transform: rotateX(90deg);
+      opacity: 0;
+      transform-origin: top;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 200ms;
+    }
+    &:nth-child(3) {
+      animation-delay: 400ms;
+    }
+    &:nth-child(4) {
+      animation-delay: 600ms;
+    }
+    &:nth-child(5) {
+      animation-delay: 800ms;
+    }
+    &:nth-child(6) {
+      animation-delay: 1s;
+    }
+    &:nth-child(7) {
+      animation-delay: 1.2s;
+    }
+  }
+  &__link {
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+
+    @include mx.to(1024px) {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: var(--color-primary);
+      padding: 1rem 5rem 1rem 3rem;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 1.2rem;
+        width: 1.2rem;
+        position: absolute;
+        left: calc(50% - 0.6rem);
+        transform: rotate(45deg);
+        margin-top: 0.9rem;
+        background-color: var(--color-primary);
+
+        @include mx.to(1024px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__toggle-btn {
+    display: none;
+
+    &-svg {
+      color: var(--color-gray-100);
+    }
+
+    @include mx.to(1024px) {
+      cursor: pointer;
+      font-size: 1.8rem;
+      display: inline-block;
+      background-color: transparent;
+    }
+  }
+}
