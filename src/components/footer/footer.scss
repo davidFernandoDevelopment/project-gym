@@ -16,6 +16,11 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 4rem;
     }
+
+    @include mx.to(600px) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
   }
   &__logo {
     width: 7rem;
@@ -23,6 +28,10 @@
   }
   &__description {
     margin-top: 0.5rem;
+
+    @include mx.to(600px) {
+      text-align: center;
+    }
   }
   &__socials {
     display: flex;

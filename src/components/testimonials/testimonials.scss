@@ -10,6 +10,10 @@
     width: 75%;
   }
 
+  @include mx.to(600px) {
+    width: 100%;
+  }
+
   &__head {
     justify-content: center;
   }

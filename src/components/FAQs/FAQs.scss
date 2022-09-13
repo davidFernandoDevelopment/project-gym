@@ -40,5 +40,9 @@
     @include mx.to(1024px) {
       grid-template-columns: 1fr;
     }
+    @include mx.to(600px) {
+      gap: 1rem;
+      margin-top: 3rem;
+    }
   }
 }

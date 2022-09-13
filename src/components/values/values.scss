@@ -41,6 +41,11 @@
 
     @include mx.to(1024px) {
       gap: 4rem 3rem;
+      gap: 3rem;
+    }
+
+    @include mx.to(600px) {
+      grid-template-columns: 1fr;
     }
   }
   &__value {
@@ -48,6 +53,11 @@
       text-align: left;
       position: relative;
       padding-top: 3.5rem;
+
+      @include mx.to(600px) {
+        width: 84%;
+        margin-inline: auto;
+      }
     }
 
     &-icon {
