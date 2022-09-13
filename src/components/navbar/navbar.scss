@@ -1,4 +1,4 @@
-@use '../../index.scss' as mx;
+@use '../../mixins.scss' as mx;
 
 @keyframes navAnimation {
   to {
@@ -27,6 +27,7 @@
   }
   &__logo {
     width: 7rem;
+    display: block;
   }
   &__list {
     display: flex;

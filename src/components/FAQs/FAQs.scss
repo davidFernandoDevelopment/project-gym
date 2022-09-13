@@ -1,0 +1,38 @@
+.faq {
+  padding: 2rem;
+  user-select: none;
+  border-radius: 1rem;
+  background-color: var(--color-gray-500);
+
+  &__main {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__question {
+  }
+  &__icon {
+    font-size: 1.5rem;
+    display: inline-flex;
+    color: var(--color-gray-100);
+    background-color: transparent;
+  }
+
+  &__answer {
+    margin-top: 1.5rem;
+  }
+}
+
+.faqs {
+  &__container {
+  }
+
+  &__wrapper {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 5rem;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,43 @@
+.values {
+  &__container {
+    display: grid;
+    grid-template-columns: 38% 50%;
+    gap: 12%;
+  }
+
+  &__left {
+  }
+  &__image {
+    filter: saturate(0.25);
+    transition: var(--transition);
+
+    &:hover {
+      filter: saturate(1);
+    }
+  }
+  &__img {
+  }
+
+  &__right {
+  }
+  &__description {
+    margin: 1.5rem 0 5rem;
+  }
+  &__wrapper {
+    display: grid;
+    gap: 3.4rem 2.4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__value {
+    &-card {
+      text-align: left;
+      position: relative;
+      padding-top: 3.5rem;
+    }
+
+    &-icon {
+      position: absolute;
+      top: -1.5rem;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.card {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 0 3rem 0 3rem;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  background-color: var(--color-gray-500);
+
+  &:hover {
+    background-color: transparent;
+    border-color: var(--color-gray-400);
+    cursor: default;
+
+    & span {
+      background-color: var(--color-secondary);
+      color: var(--color-gray-600);
+    }
+  }
+
+  &--small {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 300;
+  }
+  
+  & span {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-primary);
+    color: var(--color-gray-100);
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.5rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    transition: var(--transition);
+  }
+}

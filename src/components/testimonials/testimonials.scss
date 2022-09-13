@@ -1,0 +1,83 @@
+.testimonials {
+  width: 50rem;
+  margin-inline: auto;
+
+  $b: &;
+
+  &__head {
+    justify-content: center;
+  }
+
+  &__container {
+  }
+
+  &__testimonial-card {
+    position: relative;
+    text-align: left;
+    margin-top: 5rem;
+
+    &:hover {
+      #{$b}__avatar {
+        border-radius: 50%;
+        border-color: var(--color-gray-400);
+      }
+      #{$b}__img {
+        border-radius: 50%;
+      }
+    }
+  }
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+    position: absolute;
+    top: -2rem;
+    left: calc(50% - 2rem);
+    border: 2px solid transparent;
+    box-shadow: 0 1.5rem 2rem rgba(26, 26, 54, 0.4);
+    transition: var(--transition);
+  }
+  &__img {
+    border-radius: 1.5rem;
+    transition: var(--transition);
+  }
+  &__quote {
+    font-style: italic;
+    margin: 1rem 0 2rem;
+
+    &::before {
+      content: '"';
+    }
+    &::after {
+      content: '"';
+    }
+  }
+  &__name {
+  }
+  &__job {
+    margin-top: 0.3rem;
+  }
+
+  &__btns {
+    width: fit-content;
+    margin: 2.5rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__btn {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    & svg {
+      fill: var(--color-primary);
+      font-size: 1.8rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

@@ -19,11 +19,6 @@
 }
 
 //* TOOLS - MIXINS
-@mixin to($bp) {
-  @media screen and (max-width: $bp) {
-    @content;
-  }
-}
 
 //* GENERICS
 *,
@@ -70,6 +65,10 @@ img {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+section {
+  margin-top: 10rem;
 }
 
 body {
