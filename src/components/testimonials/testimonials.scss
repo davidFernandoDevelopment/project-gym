@@ -1,8 +1,14 @@
+@use '../../mixins.scss' as mx;
+
 .testimonials {
   width: 50rem;
   margin-inline: auto;
 
   $b: &;
+
+  @include mx.to(1024px) {
+    width: 75%;
+  }
 
   &__head {
     justify-content: center;

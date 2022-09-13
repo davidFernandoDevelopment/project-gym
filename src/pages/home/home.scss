@@ -1,9 +1,17 @@
+@use '../../mixins.scss' as mx;
+
 .header {
   width: 100vw;
   height: calc(100vh - 3rem);
   display: grid;
   place-items: center;
-  margin-top: 3rem;
+  margin-top: 5.5rem;
+
+  @include mx.to(1024px) {
+    margin-top: 0;
+    padding: 9rem 0;
+    height: fit-content;
+  }
 
   &__container {
     height: 100%;
@@ -12,10 +20,18 @@
     align-items: center;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
+
+    @include mx.to(1024px) {
+      gap: 1rem;
+    }
   }
 
   &__left {
     margin-top: -3rem;
+
+    @include mx.to(1024px) {
+      margin-top: 0;
+    }
   }
 
   &__hash {
@@ -49,6 +65,11 @@
     );
     border-radius: 50%;
     filter: blur(15px);
+
+    @include mx.to(1024px) {
+      width: 16rem;
+      height: 16rem;
+    }
   }
   &__image-wrapper {
     position: relative;

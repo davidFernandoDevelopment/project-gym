@@ -1,3 +1,5 @@
+@use '../../mixins.scss' as mx;
+
 .footer {
   margin-top: 7rem;
   padding-top: 7rem;
@@ -9,6 +11,11 @@
     display: grid;
     gap: 6rem;
     grid-template-columns: 26rem repeat(3, 1fr);
+
+    @include mx.to(1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
   }
   &__logo {
     width: 7rem;
@@ -53,6 +60,10 @@
     gap: 0.7rem;
     flex-direction: column;
     align-items: flex-start;
+
+    @include mx.to(1024px) {
+      align-items: center;
+    }
   }
   &__link-title {
     margin-bottom: 0.6rem;

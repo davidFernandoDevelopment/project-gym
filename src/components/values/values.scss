@@ -1,11 +1,22 @@
+@use '../../mixins.scss' as mx;
+
 .values {
   &__container {
     display: grid;
     grid-template-columns: 38% 50%;
     gap: 12%;
+
+    @include mx.to(1024px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: 4rem;
+    }
   }
 
   &__left {
+    @include mx.to(1024px) {
+      display: none;
+    }
   }
   &__image {
     filter: saturate(0.25);
@@ -27,6 +38,10 @@
     display: grid;
     gap: 3.4rem 2.4rem;
     grid-template-columns: 1fr 1fr;
+
+    @include mx.to(1024px) {
+      gap: 4rem 3rem;
+    }
   }
   &__value {
     &-card {
