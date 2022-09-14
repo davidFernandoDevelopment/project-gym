@@ -1,0 +1,78 @@
+@use '../../../../bemit/tools.scss' as mx;
+
+.section {
+  $b: &;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 10%;
+
+    #{$b}--reverse & {
+      grid-template-columns: 50% 40%;
+    }
+
+    @include mx.to(1024px) {
+      &,
+      #{$b}--reverse & {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @include mx.to(600px) {
+      &,
+      #{$b}--reverse & {
+        gap: 2rem;
+      }
+    }
+  }
+  &__image {
+    border-radius: 50%;
+    overflow: hidden;
+    transform: skew(15deg);
+    transition: var(--transition);
+
+    &:hover,
+    #{$b}--reverse &:hover {
+      transform: skew(0);
+    }
+
+    #{$b}--reverse & {
+      order: 1;
+      transform: skew(-15deg);
+    }
+
+    @include mx.to(1024px) {
+      width: 60%;
+      margin-inline: auto;
+
+      #{$b}--reverse & {
+        order: 0;
+      }
+    }
+
+    @include mx.to(600px) {
+      width: 80%;
+    }
+  }
+  &__img {
+  }
+
+  &__content {
+    & h1 {
+      margin-bottom: 2rem;
+
+      @include mx.to(1024px) {
+        margin-bottom: 1.2rem;
+      }
+    }
+    & p {
+      margin-bottom: 1rem;
+
+      @include mx.to(1024px) {
+        margin-bottom: 0.85rem;
+      }
+    }
+  }
+}

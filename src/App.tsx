@@ -3,7 +3,7 @@ import {
   Routes, Route
 } from 'react-router-dom';
 
-import { Navbar } from './components';
+import { Navbar, Footer } from './components';
 import { About, Contact, Gallery, Home, NotFound, Plans, Trainers } from './pages';
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
         <Route path='contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

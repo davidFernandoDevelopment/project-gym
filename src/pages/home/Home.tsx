@@ -1,19 +1,17 @@
 import './home.scss';
 import {
-  FAQs, Banner, Programs,
+  FAQs, Landing, Programs,
   Testimonials, Values
 } from './components';
-import { Footer } from '../../components';
 
 const Home = () => {
   return (
     <>
-      <Banner />
+      <Landing />
       <Programs />
       <Values />
       <FAQs />
       <Testimonials />
-      <Footer />
     </>
   );
 };
