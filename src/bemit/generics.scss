@@ -1,0 +1,76 @@
+@use './tools.scss' as mx;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+//* TAGS
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-gray-100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  color: var(--color-gray-100);
+}
+
+h1 {
+  font-size: 3rem;
+
+  @include mx.to(1024px) {
+    font-size: 2rem;
+  }
+
+  @include mx.to(600px) {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+
+  @include mx.to(1024px) {
+    font-size: 1.6rem;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+section {
+  margin-top: 10rem;
+
+  @include mx.to(1024px) {
+    margin-top: 8rem;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-gray-200);
+  line-height: 1.7;
+  overflow-x: hidden;
+  background-color: var(--color-gray-600);
+}

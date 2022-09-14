@@ -2,8 +2,8 @@ import { FaQuestion } from 'react-icons/fa';
 
 import './FAQs.scss';
 import FAQ from './FAQ';
-import { SectionHead } from '../';
-import { faqs } from '../../data';
+import { SectionHead } from '../../../../components';
+import { faqs } from '../../../../data';
 
 
 const FAQs = () => {

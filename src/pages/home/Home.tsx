@@ -1,13 +1,14 @@
 import './home.scss';
 import {
-  FAQs, Footer, Header, Programs,
+  FAQs, Banner, Programs,
   Testimonials, Values
-} from '../../components';
+} from './components';
+import { Footer } from '../../components';
 
 const Home = () => {
   return (
     <>
-      <Header />
+      <Banner />
       <Programs />
       <Values />
       <FAQs />

@@ -1,0 +1,11 @@
+@use './tools.scss' as mx;
+
+.container {
+  width: var(--container-width-lg);
+  max-width: 1920px;
+  margin-inline: auto; //margin: 0 auto;
+
+  @include mx.to(1024px) {
+    width: var(--container-width-md);
+  }
+}

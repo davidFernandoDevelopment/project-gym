@@ -1,10 +1,10 @@
 import { GiCutDiamond } from 'react-icons/gi';
 
 import './values.scss';
-import { Card } from '../../UI';
-import { SectionHead } from '..';
-import { values } from '../../data';
-import Image from '../../images/values.jpg';
+import { Card } from '../../../../UI';
+import { values } from '../../../../data';
+import Image from '../../../../images/values.jpg';
+import { SectionHead } from '../../../../components';
 
 
 const Values = () => {

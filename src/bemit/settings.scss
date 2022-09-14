@@ -1,0 +1,18 @@
+:root {
+  --primary-hue: 210;
+  --gray-blue: 240;
+  --color-primary: hsl(var(--primary-hue), 100%, 50%);
+  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
+  --color-secondary: #ffb116;
+  --color-gray-100: hsl(var(--gray-blue), 47%, 94%);
+  --color-gray-200: hsl(var(--gray-blue), 26%, 75%);
+  --color-gray-300: hsl(var(--gray-blue), 24%, 64%);
+  --color-gray-400: hsl(var(--gray-blue), 16%, 41%);
+  --color-gray-500: hsl(var(--gray-blue), 44%, 25%);
+  --color-gray-600: hsl(var(--gray-blue), 48%, 15%);
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+
+  --transition: all 500ms ease;
+}

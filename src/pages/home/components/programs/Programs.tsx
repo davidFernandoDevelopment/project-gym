@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import { FaCrown } from 'react-icons/fa';
 import { AiFillCaretRight } from 'react-icons/ai';
 
 import './programs.scss';
-import { SectionHead } from '..';
-import { programs } from '../../data';
-import { Card } from '../../UI';
-import { Link } from 'react-router-dom';
+import { Card } from '../../../../UI';
+import { programs } from '../../../../data';
+import { SectionHead } from '../../../../components';
+
 
 const Programs = () => {
     return (

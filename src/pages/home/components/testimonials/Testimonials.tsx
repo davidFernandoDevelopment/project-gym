@@ -1,11 +1,11 @@
+import { useState } from 'react';
 import { ImQuotesLeft } from 'react-icons/im';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 
 import './testimonials.scss';
-import { Card } from '../../UI';
-import { useState } from 'react';
-import { testimonials } from '../../data';
-import SectionHead from '../sectionHead/SectionHead';
+import { Card } from '../../../../UI';
+import { testimonials } from '../../../../data';
+import { SectionHead } from '../../../../components';
 
 
 const Testimonials = () => {

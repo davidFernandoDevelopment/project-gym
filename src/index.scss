@@ -1,141 +1,15 @@
-@use './mixins.scss' as mx;
-
 //* SETTINGS
-:root {
-  --primary-hue: 210;
-  --gray-blue: 240;
-  --color-primary: hsl(var(--primary-hue), 100%, 50%);
-  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
-  --color-secondary: #ffb116;
-  --color-gray-100: hsl(var(--gray-blue), 47%, 94%);
-  --color-gray-200: hsl(var(--gray-blue), 26%, 75%);
-  --color-gray-300: hsl(var(--gray-blue), 24%, 64%);
-  --color-gray-400: hsl(var(--gray-blue), 16%, 41%);
-  --color-gray-500: hsl(var(--gray-blue), 44%, 25%);
-  --color-gray-600: hsl(var(--gray-blue), 48%, 15%);
-
-  --container-width-lg: 80%;
-  --container-width-md: 90%;
-
-  --transition: all 500ms ease;
-}
+@use './bemit/settings.scss';
 
 //* TOOLS - MIXINS
 
 //* GENERICS
-*,
-*::after,
-*::before {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
-
-//* TAGS
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--color-gray-100);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-  color: var(--color-gray-100);
-}
-
-h1 {
-  font-size: 3rem;
-
-  @include mx.to(1024px) {
-    font-size: 2rem;
-  }
-  
-  @include mx.to(600px) {
-    font-size: 2.2rem;
-    line-height: 1.3;
-  }
-}
-
-h2 {
-  font-size: 2rem;
-
-  @include mx.to(1024px) {
-    font-size: 1.6rem;
-  }
-}
-
-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-section {
-  margin-top: 10rem;
-
-  @include mx.to(1024px) {
-      margin-top: 8rem;
-  }
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--color-gray-200);
-  line-height: 1.7;
-  overflow-x: hidden;
-  background-color: var(--color-gray-600);
-}
+@use './bemit/generics.scss';
 
 //* OBJECTS
-.container {
-  width: var(--container-width-lg);
-  max-width: 1920px;
-  margin-inline: auto; //margin: 0 auto;
-
-  @include mx.to(1024px) {
-    width: var(--container-width-md);
-  }
-}
+@use './bemit/object.scss';
 
 //* COMPONENTS
-.btn {
-  color: var(--color-gray-100);
-  width: fit-content;
-  margin: 0 auto;
-  padding: 0.9rem 2rem;
-  background-color: var(--color-primary);
-  border-radius: 1.5rem;
-  transition: var(--transition);
+@use './bemit/components';
 
-  &:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-gray-600);
-  }
-
-  &--small {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.9rem;
-
-    &:hover {
-      background-color: var(--color-gray-100);
-    }
-  }
-
-  &--large {
-    padding: 1.2rem 3rem;
-    border-radius: 2rem;
-    font-size: 1.1rem;
-  }
-}
+//* UTILITIES
