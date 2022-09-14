@@ -1,0 +1,30 @@
+@use '../../bemit/tools.scss' as mx;
+
+.gallery {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mx.to(1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    @include mx.to(600px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  &__image {
+    border: 1rem solid transparent;
+    transition: var(--transition);
+
+    &:hover {
+      border-color: var(--color-gray-500);
+    }
+
+    @include mx.to(1024px) {
+      border: 0;
+    }
+  }
+}
