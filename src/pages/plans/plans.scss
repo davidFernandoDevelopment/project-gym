@@ -1,0 +1,56 @@
+@use '../../bemit/tools.scss' as mx;
+
+.plan {
+  @include mx.to(600px) {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  &__name {
+    margin-bottom: 0.8rem;
+  }
+  &__description {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  &__price {
+    color: var(--color-primary-variant);
+    display: inline;
+  }
+  &__currency {
+    display: inline;
+    color: var(--color-gray-100);
+  }
+  &__title {
+    margin-top: 2rem;
+  }
+  &__feature {
+    margin-top: 1rem;
+    color: var(--color-gray-100);
+
+    &--disabled {
+      color: var(--color-gray-400);
+    }
+  }
+  &__btn {
+    margin-top: 3rem;
+    cursor: pointer;
+  }
+}
+
+.plans {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    @include mx.to(1024px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @include mx.to(600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
