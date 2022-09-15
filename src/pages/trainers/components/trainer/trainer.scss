@@ -1,0 +1,40 @@
+@use '../../../../bemit/tools.scss' as mx;
+
+.trainer {
+  padding: 1rem;
+  $b: &;
+
+  @include mx.to(600px) {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  &__img {
+    border-radius: 0.2rem;
+    overflow: hidden;
+  }
+  &__name {
+    margin-top: 2rem;
+  }
+  &__job {
+    margin-top: 0.5rem;
+  }
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  &__social {
+    font-size: 0.7rem;
+    background-color: var(--color-gray-600);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    transition: var(--transition);
+
+    #{$b}:hover & {
+      background-color: var(--color-gray-500);
+    }
+  }
+}
